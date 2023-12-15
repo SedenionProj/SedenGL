@@ -129,9 +129,9 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Core.h" />
     <ClInclude Include="SedenGL.h" />
     <ClInclude Include="Source\Application.h" />
-    <ClInclude Include="Source\core.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application.cpp" />
