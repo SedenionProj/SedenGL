@@ -132,11 +132,9 @@
     <ClInclude Include="SedenGL.h" />
     <ClInclude Include="Source\Application.h" />
     <ClInclude Include="Source\core.h" />
-    <ClInclude Include="Source\main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application.cpp" />
-    <ClCompile Include="Source\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

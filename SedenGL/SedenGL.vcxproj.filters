@@ -13,15 +13,9 @@
     <ClInclude Include="Source\core.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\main.h">
-      <Filter>Source</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
