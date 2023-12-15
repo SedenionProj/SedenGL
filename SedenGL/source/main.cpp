@@ -1,8 +1,6 @@
 #include "main.h"
-#include <iostream>
+#include "Application.h"
 
-namespace Seden {
-	void Seden::init() {
-		std::cout << "hello SedenGL <3\n";
-	}
-}
+
+
+

@@ -1,3 +1,4 @@
 #pragma once
 
-#include "source/main.h"
+#include "Source/main.h"
+#include "Source/Application.h"
