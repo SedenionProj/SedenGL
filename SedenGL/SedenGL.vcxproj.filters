@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{6C01343A-5864-C3DE-01EA-FB94ED2B8F61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLFW">
+      <UniqueIdentifier>{2B80440F-9796-42A5-E00D-CEC64C63132D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLFW\include">
+      <UniqueIdentifier>{9EA238D7-0A65-6C61-5315-FBEDBF16453F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLFW\include\GLFW">
+      <UniqueIdentifier>{9DB0F771-89D6-C1D8-721C-47A45EE1E6A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\glad">
+      <UniqueIdentifier>{F397560F-5FAE-54A5-A825-E0C6147B252D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\glad\include">
+      <UniqueIdentifier>{6602AAF8-D2C4-DD82-1B75-6C0F8776B660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\glad\include\KHR">
+      <UniqueIdentifier>{DAD32B69-46EC-1293-0F99-A22C7B70A72C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\glad\include\glad">
+      <UniqueIdentifier>{2D45B68E-196B-80F5-02B1-05C1EE75A5C1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3.h">
+      <Filter>Dependencies\GLFW\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3native.h">
+      <Filter>Dependencies\GLFW\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\glad\include\KHR\khrplatform.h">
+      <Filter>Dependencies\glad\include\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\glad\include\glad\glad.h">
+      <Filter>Dependencies\glad\include\glad</Filter>
+    </ClInclude>
     <ClInclude Include="SedenGL.h" />
     <ClInclude Include="Source\Application.h">
       <Filter>Source</Filter>
@@ -13,10 +49,14 @@
     <ClInclude Include="Source\Core.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Log.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\glad.c" />
   </ItemGroup>
 </Project>

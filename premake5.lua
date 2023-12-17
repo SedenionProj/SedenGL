@@ -26,7 +26,22 @@ project "SedenGL"
 
 	includedirs
 	{
-		
+		"%{prj.name}/Dependencies/GLFW/include",
+		"%{prj.name}/Dependencies/glad/include"
+	}
+
+	libdirs
+	{
+		"SedenGL/Dependencies/GLFW/lib-vc2022"
+	}
+
+	links
+	{
+		"glfw3_mt.lib",
+		"opengl32.lib",
+		"User32.lib",
+		"Gdi32.lib",
+		"Shell32.lib"
 	}
 
 	filter "system:windows"

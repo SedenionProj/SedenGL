@@ -6,7 +6,9 @@ namespace Seden {
 	public:
 		App();
 		virtual ~App();
-		void init();
+		void start();
+		virtual void onInit();
+		virtual void onUpdate();
 	};
 	
 }

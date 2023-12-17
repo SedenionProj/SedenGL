@@ -1,11 +1,20 @@
 #include <SedenGL.h>
 
-class Example_class : public Seden::App {
+#include <iostream>
 
+
+class Example_class : public Seden::App {
+public:
+	void onInit() override {
+
+	}
+	void onUpdate() override {
+
+	}
 };
 
 int main() {
 	Example_class* app = new Example_class();
-	app->init();
+	app->start();
 	delete app;
 }
