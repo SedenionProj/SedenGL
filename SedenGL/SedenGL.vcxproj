@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SEDEN_PLATFORM_WINDOWS;SEDEN_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\glad\include;Dependencies\GLM;Dependencies\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -100,7 +100,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SEDEN_PLATFORM_WINDOWS;SEDEN_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\glad\include;Dependencies\GLM;Dependencies\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -121,7 +121,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SEDEN_PLATFORM_WINDOWS;SEDEN_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Dependencies\GLFW\include;Dependencies\glad\include;Dependencies\GLM;Dependencies\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -140,16 +140,41 @@
   <ItemGroup>
     <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3.h" />
     <ClInclude Include="Dependencies\GLFW\include\GLFW\glfw3native.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\common.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\exponential.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\geometric.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\integer.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\matrix.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\neon.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\packing.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\platform.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\trigonometric.h" />
+    <ClInclude Include="Dependencies\GLM\glm\simd\vector_relational.h" />
     <ClInclude Include="Dependencies\glad\include\KHR\khrplatform.h" />
     <ClInclude Include="Dependencies\glad\include\glad\glad.h" />
+    <ClInclude Include="Dependencies\stb\stb_image.h" />
+    <ClInclude Include="Dependencies\stb\stb_image_write.h" />
     <ClInclude Include="SedenGL.h" />
     <ClInclude Include="Source\Application.h" />
     <ClInclude Include="Source\Core.h" />
     <ClInclude Include="Source\Log.h" />
+    <ClInclude Include="Source\Opengl\Shader.h" />
+    <ClInclude Include="Source\Opengl\Texture.h" />
+    <ClInclude Include="Source\Opengl\UniformBuffer.h" />
+    <ClInclude Include="Source\Opengl\VertexArray.h" />
+    <ClInclude Include="Source\Opengl\buffer.h" />
+    <ClInclude Include="Source\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Dependencies\GLM\glm\detail\glm.cpp" />
     <ClCompile Include="Source\Application.cpp" />
-    <ClCompile Include="Source\glad.c" />
+    <ClCompile Include="Source\Opengl\Buffer.cpp" />
+    <ClCompile Include="Source\Opengl\Shader.cpp" />
+    <ClCompile Include="Source\Opengl\Texture.cpp" />
+    <ClCompile Include="Source\Opengl\UniformBuffer.cpp" />
+    <ClCompile Include="Source\Opengl\VertexArray.cpp" />
+    <ClCompile Include="Source\Window\Window.cpp" />
+    <ClCompile Include="Source\Window\glad.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

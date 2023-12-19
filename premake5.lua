@@ -21,18 +21,21 @@ project "SedenGL"
 	files
 	{
 		"%{prj.name}/**.h",
-		"%{prj.name}/**.cpp"
+		"%{prj.name}/**.cpp",
+		"%{prj.name}/**.c"
 	}
 
 	includedirs
 	{
 		"%{prj.name}/Dependencies/GLFW/include",
-		"%{prj.name}/Dependencies/glad/include"
+		"%{prj.name}/Dependencies/glad/include",
+		"%{prj.name}/Dependencies/GLM",
+		"%{prj.name}/Dependencies/stb"
 	}
 
 	libdirs
 	{
-		"SedenGL/Dependencies/GLFW/lib-vc2022"
+		"%{prj.name}/Dependencies/GLFW/lib-vc2022"
 	}
 
 	links
@@ -60,17 +63,6 @@ project "SedenGL"
 
 		}
 
-workspace "SedenGL"
-	architecture "x64"
-
-	configurations
-	{
-		"Debug",
-		"Release",
-		"Dist"
-	}
-
-outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Sandbox"
 	location "Sandbox"

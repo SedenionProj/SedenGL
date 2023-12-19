@@ -1,14 +1,9 @@
 #include <SedenGL.h>
-
 #include <iostream>
-
 
 class Example_class : public Seden::App {
 public:
 	void onInit() override {
-
-	}
-	void onUpdate() override {
 
 	}
 };

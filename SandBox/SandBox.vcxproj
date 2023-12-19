@@ -127,6 +127,10 @@
       <Project>{8729C5EB-F308-4487-FC20-CF5D687FAAE8}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\basicFrag.glsl" />
+    <None Include="Shaders\basicVert.glsl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
