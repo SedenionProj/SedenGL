@@ -3,17 +3,22 @@
 #include "Log.h"
 #include "Opengl/buffer.h"
 
+
+
 namespace Seden {
 	App::App()
 	{
 		window = new Window();
+
+		window->setEventCallback(std::bind(&App::onEvent, this, std::placeholders::_1));
+
 		running = true;
 
 		float v[] = {
-	 1.f,  1.f, 0.0f,
-	 1.f, -1.f, 0.0f,
-	-1.f, -1.f, 0.0f,
-	-1.f,  1.f, 0.0f
+			 1.f,  1.f, 0.0f,
+			 1.f, -1.f, 0.0f,
+			-1.f, -1.f, 0.0f,
+			-1.f,  1.f, 0.0f
 		};
 		unsigned int index[] = {
 			0, 1, 3,
@@ -25,6 +30,8 @@ namespace Seden {
 		ib = new IndexBuffer(sizeof(index), index);
 		vb = new VertexBuffer(sizeof(v), v);
 		va->AddBuffer(*vb, 3, 3, 0);
+
+
 		
 	}
 	App::~App()
@@ -54,5 +61,8 @@ namespace Seden {
 		shaders->Bind();
 		ib->Bind();
 		glDrawElements(GL_TRIANGLES, ib->GetCount(), GL_UNSIGNED_INT, 0);
+	}
+	void App::onEvent(Event& ev)
+	{
 	}
 }

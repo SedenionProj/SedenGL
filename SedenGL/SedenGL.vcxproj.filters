@@ -43,6 +43,9 @@
     <Filter Include="Source">
       <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Events">
+      <UniqueIdentifier>{7ABAF22F-E67A-6E66-AFB5-B7E31B35B342}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source\Opengl">
       <UniqueIdentifier>{0ABCD946-767C-557D-3FB7-9EFAAB369A59}</UniqueIdentifier>
     </Filter>
@@ -106,6 +109,9 @@
     <ClInclude Include="Source\Core.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Events\Event.h">
+      <Filter>Source\Events</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Log.h">
       <Filter>Source</Filter>
     </ClInclude>
@@ -113,9 +119,6 @@
       <Filter>Source\Opengl</Filter>
     </ClInclude>
     <ClInclude Include="Source\Opengl\Texture.h">
-      <Filter>Source\Opengl</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Opengl\UniformBuffer.h">
       <Filter>Source\Opengl</Filter>
     </ClInclude>
     <ClInclude Include="Source\Opengl\VertexArray.h">
@@ -144,9 +147,6 @@
     <ClCompile Include="Source\Opengl\Texture.cpp">
       <Filter>Source\Opengl</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Opengl\UniformBuffer.cpp">
-      <Filter>Source\Opengl</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Opengl\VertexArray.cpp">
       <Filter>Source\Opengl</Filter>
     </ClCompile>
@@ -156,5 +156,6 @@
     <ClCompile Include="Source\Window\glad.c">
       <Filter>Source\Window</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Events\Event.cpp" />
   </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@ workspace "SedenGL"
 	{
 		"Debug",
 		"Release",
-		"Dist"
+		"Dist"	
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
@@ -17,6 +17,8 @@ project "SedenGL"
 
 	targetdir ("build/bin/"..outputdir.."/%{prj.name}")
 	objdir ("build/bin-int/"..outputdir.."/%{prj.name}")
+
+
 
 	files
 	{
@@ -30,7 +32,8 @@ project "SedenGL"
 		"%{prj.name}/Dependencies/GLFW/include",
 		"%{prj.name}/Dependencies/glad/include",
 		"%{prj.name}/Dependencies/GLM",
-		"%{prj.name}/Dependencies/stb"
+		"%{prj.name}/Dependencies/stb",
+		"%{prj.name}/Source"
 	}
 
 	libdirs
@@ -47,10 +50,12 @@ project "SedenGL"
 		"Shell32.lib"
 	}
 
+	
+
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0.19041.0"
+		systemversion "latest"
 		
 		defines
 		{
@@ -62,6 +67,9 @@ project "SedenGL"
 			("{COPY} %{cfg.buildtarget.relpath} ../build/bin/"..outputdir.."/Sandbox")
 
 		}
+		
+	filter "configurations:Debug"
+		runtime "debug"
 
 
 project "Sandbox"
@@ -91,7 +99,7 @@ project "Sandbox"
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0.19041.0"
+		systemversion "latest"
 		
 		defines
 		{
